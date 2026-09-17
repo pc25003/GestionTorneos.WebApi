@@ -45,9 +45,14 @@ builder.Services.AddAuthentication(options =>
 // 3. Registro de Servicios (Inyección de Dependencias)
 builder.Services.AddScoped<IReservaService, ReservaService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ITorneoService, TorneoService>();
 
 // 4. Controladores y documentación Swagger con soporte para Bearer Token
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
