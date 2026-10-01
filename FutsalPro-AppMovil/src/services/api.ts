@@ -3,7 +3,7 @@ import axios, { AxiosInstance } from 'axios';
 // URL base configurada para apuntar al backend desplegado en Render
 // Se puede sobreescribir con la variable de entorno EXPO_PUBLIC_API_URL
 export const API_BASE_URL =
-  process.env.EXPO_PUBLIC_API_URL || 'https://gestion-torneos-api.onrender.com/api';
+  process.env.EXPO_PUBLIC_API_URL || 'https://futsal-k08n.onrender.com/api';
 
 // Instancia centralizada de Axios
 export const api: AxiosInstance = axios.create({

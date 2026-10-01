@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Configuración base de la API hacia el backend en Render
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://gestion-torneos-api.onrender.com/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://futsal-k08n.onrender.com/api';
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
